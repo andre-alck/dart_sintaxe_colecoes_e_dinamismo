@@ -12,6 +12,17 @@ void main() {
 
   registrarPrecos["Errei"] = "o nome.";
   registrarPrecos.remove("Errei");
+
+  Viagem viagemHoje = Viagem(dinheiro: 1.0);
+  print(viagemHoje.dinheiro);
+  print(Viagem.codigoViagem);
+}
+
+class Viagem {
+  static String codigoViagem = "AWERIJSB872";
+  double dinheiro;
+
+  Viagem({required this.dinheiro});
 }
 
 enum Transporte { andando, aviao, bike, carro, patins, skate, trem }

@@ -55,4 +55,12 @@ void main() {
     expect(mapPessoa["idade"], pessoa.idade);
     expect(mapPessoa["estaAutenticada"], pessoa.estaAutenticada);
   });
+
+  test('dynamic vs var', () {
+    dynamic value = "i'm a String";
+    expect(value.runtimeType, String);
+
+    value = 123;
+    expect(value.runtimeType, int);
+  });
 }
