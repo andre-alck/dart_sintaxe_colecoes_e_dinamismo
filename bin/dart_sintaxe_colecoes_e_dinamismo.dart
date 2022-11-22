@@ -3,18 +3,15 @@ void main() {
 
   Set<String> registrosVisitados = <String>{};
   registrosVisitados = registrarDestinos("Rio de Janeiro", registrosVisitados);
-  registrosVisitados = registrarDestinos("São Paulo", registrosVisitados);
-  registrosVisitados = registrarDestinos("Recife", registrosVisitados);
-  registrosVisitados = registrarDestinos("Rio de Janeiro", registrosVisitados);
 
-  print('first:\t${registrosVisitados.first}');
-  print('last:\t${registrosVisitados.last}');
-  print('isEmpty:\t${registrosVisitados.isEmpty}');
-  print('contains("Alagoas"):\t${registrosVisitados.contains("Alagoas")}\n');
+  Map<String, dynamic> registrarPrecos = {};
 
-  for (final String registro in registrosVisitados) {
-    print(registro);
-  }
+  registrarPrecos["Rio de Janeiro"] = 1200;
+  registrarPrecos["São Paulo"] = 1500;
+  registrarPrecos["Nova Iorque"] = "MUITO CARO";
+
+  registrarPrecos["Errei"] = "o nome.";
+  registrarPrecos.remove("Errei");
 }
 
 enum Transporte { andando, aviao, bike, carro, patins, skate, trem }
